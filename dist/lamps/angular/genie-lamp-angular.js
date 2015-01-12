@@ -5,13 +5,13 @@
  * http://www.github.com/kentcdodds/genie
  * See README.md
  */
-(function (root, factory) {
+(function (root) {
   if (typeof define === 'function' && define.amd) {
-    define(['../../genie'], factory);
+    define(['../../genie']);
   } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = factory(require('geniejs'));
+    module.exports = require('geniejs');
   } else {
-    root.genieUx = factory(genie);
+    var genieUx = genie;
   }
 }(this, function(genie) {
   'use strict';
